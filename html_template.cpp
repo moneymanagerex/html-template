@@ -78,9 +78,8 @@ row_cell_s & row_cell_s::operator= (const loop_s & arg) {
 //----------------------------------------------------------------------------
 
 row_cell_s & row_s::operator() (const std::wstring & str_name) {
-    wstring str_name_uc = str_name;
     // uppercase
-    str_name_uc = str_name;
+    wstring str_name_uc = str_name;
     uc(str_name_uc);
 
     // create new table cell
@@ -735,15 +734,15 @@ void html_template::process_simple_vars(block_map_t & r_block_map,
 
         wstring str_replace_with = L"";
 
-        // find the variable of this name
-        variables_t::iterator pos_var;
-        pos_var = r_variables_c.find(itr_block->Get_Name());
-        cls_variable* p_var = 0;
+        // uppercase
+        wstring str_name_uc = itr_block->Get_Name();
+        uc(str_name_uc);
 
-        pos_var = r_variables_c.find(itr_block->Get_Name());
+        // find the variable of this name
+        variables_t::iterator pos_var = r_variables_c.find(str_name_uc);
 
         if (pos_var != r_variables_c.end()) {
-            p_var = &(pos_var->second);
+            cls_variable* p_var = &(pos_var->second);
             str_replace_with = p_var->Get_Val_String();
             escape_var(str_replace_with, itr_block->Get_Escape_Mode());
         }

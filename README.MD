@@ -18,7 +18,7 @@ DOCUMENTATION
 Under docs/ as well as on the World Wide Webbb:
   http://nulidex.com/code/docs/html_template/
 
-MAJOR DIFFERENCES with HTML::Template
+MAJOR DIFFERENCES with [HTML::Template](http://search.cpan.org/~samtregar/HTML-Template-2.6/Template.pm)
 * There are no switches to enable/disable features, such as loop context
 variables or globals. Everything is enabled by default. 
 

@@ -24,18 +24,13 @@ variables or globals. Everything is enabled by default.
 
 ================================================================================
 CREATING TESTS
-
 1. Create a template file in t/
-
 2. Add the test to run(), creating a separate container if this is a test for
    a new type of features.
-
 3. Create the reference output file: 
   ``` $ ./test create t/my_new_test.tmpl```
-   
 4. Inspect t/my_new_test.txt to make sure the output is correct.
    This will be used now as a regression test.
-
 5. Recompile and run the test binary.
 
 ================================================================================

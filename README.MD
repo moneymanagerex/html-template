@@ -31,7 +31,7 @@ CREATING TESTS
    a new type of features.
 
 3. Create the reference output file: 
-   $ ./test create t/my_new_test.tmpl
+  ``` $ ./test create t/my_new_test.tmpl```
    
 4. Inspect t/my_new_test.txt to make sure the output is correct.
    This will be used now as a regression test.
@@ -40,12 +40,13 @@ CREATING TESTS
 
 ================================================================================
 RUNNING TESTS
-
+```
 $ ./test
-
+```
 OR for one test
-
+```
 $ ./test run t/my_test.tmpl
+```
 
 ================================================================================
 EXAMPLES
